@@ -23,7 +23,7 @@ class Student {
   absent() {
     const index = this.suppleness.findIndex((e) => e === undefined);
     if (index !== -1) {
-      this.suppleness[index] = true;
+      this.suppleness[index] = false;
     }
     return this;
   }
