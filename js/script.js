@@ -31,9 +31,6 @@ class Student {
   summary() {
     const avgSuppleness =
       this.suppleness.filter((e) => e === true).length / this.suppleness.length;
-    console.log(avgSuppleness);
-    console.log(this.suppleness.length);
-    console.log(avgSuppleness);
     const sumAssessments = this.assessments.reduce(
       (accumulator, currentValue) => accumulator + currentValue,
       0
@@ -43,11 +40,11 @@ class Student {
     console.log(avgAssessments);
     if (avgSuppleness > 0.9 && avgAssessments > 90) {
       return "Молодець!";
-    } else if (avgSuppleness > 0.9 || avgAssessments > 90) {
-      return "Добре, але можна краще!";
-    } else {
-      return "Редиска!";
     }
+    if (avgSuppleness > 0.9 || avgAssessments > 90) {
+      return "Добре, але можна краще!";
+    }
+    return "Редиска!";
   }
 }
 
